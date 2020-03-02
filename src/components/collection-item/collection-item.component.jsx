@@ -1,7 +1,7 @@
 import React from "react";
 import './collection-item.styles.scss';
 
-const Collectionitem = ({ name, imageUrl, price }) => (
+const CollectionItem = ({ name, imageUrl, price }) => (
     <div className='collection-item'>
         <div className='image'
         style={{
@@ -14,4 +14,4 @@ const Collectionitem = ({ name, imageUrl, price }) => (
     </div>
 )
 
-export default Collectionitem;
+export default CollectionItem;
