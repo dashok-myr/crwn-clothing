@@ -12,17 +12,17 @@ const CollectionPreview = ({ title, routeName, items, history, match }) => (
       {title.toUpperCase()}
     </h1>
     <div className="preview">
-      {items.map(({id, name, imageUrl, price}, index) => {
-        if (index < 4) {
-          return (
-            <CollectionItem
-              key={id}
-              name={name}
-              imageUrl={imageUrl}
-              price={price}
-            />
-          );
-        }
+      {items
+      .filter((_, index) => index < 4)
+      .map(({ id, name, imageUrl, price }, index) => {
+        return (
+          <CollectionItem
+            key={id}
+            name={name}
+            imageUrl={imageUrl}
+            price={price}
+          />
+        );
       })}
     </div>
   </div>
