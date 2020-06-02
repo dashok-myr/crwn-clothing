@@ -13,17 +13,10 @@ const CollectionPreview = ({ title, routeName, items, history, match }) => (
     </h1>
     <div className="preview">
       {items
-      .filter((_, index) => index < 4)
-      .map(({ id, name, imageUrl, price }, index) => {
-        return (
-          <CollectionItem
-            key={id}
-            name={name}
-            imageUrl={imageUrl}
-            price={price}
-          />
-        );
-      })}
+        .filter((_, index) => index < 4)
+        .map((item) => {
+          return <CollectionItem key={item.id} item={item} />;
+        })}
     </div>
   </div>
 );
