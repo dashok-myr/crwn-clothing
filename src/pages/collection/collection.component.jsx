@@ -22,4 +22,3 @@ const mapStateToProps = (state, props) => ({
   collection: selectCollection(props.match.params.collectionId)(state),
 });
 export default connect(mapStateToProps)(CollectionPage);
- 
