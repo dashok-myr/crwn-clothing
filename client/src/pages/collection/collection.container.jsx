@@ -10,11 +10,11 @@ import CollectionPage from "../collection/collection.component";
 
 const mapStateToProps = createStructuredSelector({
     isLoading: state => !selectIsCollectionsLoaded(state)
-  });
+});
 
-  const CollectionsPageContainer = compose(
+const CollectionsPageContainer = compose(
     connect(mapStateToProps),
     WithSpinner
-  )(CollectionPage);
-  
-  export default CollectionsPageContainer;
+)(CollectionPage);
+
+export default CollectionsPageContainer;
