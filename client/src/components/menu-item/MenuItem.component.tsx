@@ -1,16 +1,23 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import "./menu-item.styles.scss";
 import { useHistory, useRouteMatch } from "react-router-dom";
 
-const MenuItem = ({ title, imageUrl, linkUrl }) => {
+interface IMenuItemProps {
+  title: string;
+  imageUrl: string;
+  linkUrl: string;
+}
+
+const MenuItem = (props: IMenuItemProps): ReactElement => {
+  const { title, imageUrl, linkUrl }: IMenuItemProps = props;
   const history = useHistory();
   const match = useRouteMatch();
 
-  const goToPageFromLinkUrl = () => {
+  const goToPageFromLinkUrl = (): void => {
     history.push(`${match.url}${linkUrl}`);
   };
 
-  const onClickHandle = () => {
+  const onClickHandle = (): void => {
     goToPageFromLinkUrl();
   };
 
