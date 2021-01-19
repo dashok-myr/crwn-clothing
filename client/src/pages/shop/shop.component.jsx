@@ -4,7 +4,7 @@ import { Route } from "react-router-dom";
 
 import { fetchCollectionsStart } from "../../redux/shop/shop.actions.js";
 import CollectionsOverviewContainer from "../../components/collections-overview/collection-overview.container";
-import CollectionsPageContainer from "../collection/collection.container";
+import CollectionsPageContainer from "../Collection/Collection.container";
 
 const ShopPage = ({ match }) => {
   const dispatch = useDispatch();

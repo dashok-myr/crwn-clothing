@@ -14,9 +14,10 @@ const cartReducer = (state = INITIAL_STATE, action) => {
         hidden: !state.hidden,
       };
     case CartActionTypes.ADD_ITEM:
+      const item = action.payload;
       return {
         ...state,
-        cartItems: addItemToCart(state.cartItems, action.payload),
+        cartItems: addItemToCart(state.cartItems, item),
       };
     case CartActionTypes.REMOVE_ITEM:
       return {
