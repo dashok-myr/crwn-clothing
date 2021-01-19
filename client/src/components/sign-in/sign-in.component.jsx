@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 import "./sign-in.styles.scss";
 import FormInput from "../../components/form-input/form-input.component";
-import CustomButton from "../custom-button/custom-button.component";
+import CustomButton from "../CustomButton/CustomButton.component";
 import {
   googleSignInStart,
   emailSignInStart,
